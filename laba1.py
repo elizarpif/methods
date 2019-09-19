@@ -1,5 +1,5 @@
 
-x = 0.1 #x - параметр, x in [1/4,1/4)
+x = 0.1 #x - параметр, x in [-1/4,1/4)
 right_sum = pow(1-x*4, -5/2)
 right_sum = right_sum * 6
 
