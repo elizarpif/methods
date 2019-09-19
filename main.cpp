@@ -4,7 +4,10 @@
 #include <limits>
 using namespace std;
 
+//полученная рекуррентная формула
 //a(n+1) = a(n) * (4n+10) / (n+1) * x
+
+//функция, высчитывающая номер n, с которого разница справа и слева будет минимальная
 void difference(long double right_sum, long double x){
     int i = 1;
     
@@ -40,8 +43,8 @@ void difference(long double right_sum, long double x){
 int main()
 {
     //x in [-1/4;1/4)
-
-    long double x=0.2;
+    //задаем начальные значения
+    long double x=0.1;
     long double t1 = -5.0;
     long double t2 = 2.0;
     long double a = 1.0-x*4.0, b = t1/t2;
