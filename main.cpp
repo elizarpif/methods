@@ -7,10 +7,13 @@ using namespace std;
 //a(n+1) = a(n) * (4n+10) / (n+1) * x
 void difference(long double right_sum, long double x){
     int i = 1;
-
+    
+    //укажем первый член ряда
     long double a0 = 6.0*powl(x,0), sum = a0, tmp;
+    //и разницу
     long double dif = powl(10, -10);
-
+    
+    //установим количество цифр, выводимых на консоль
     std::cout.setf(std::ios::fixed);
     std::cout.precision(11);
 
@@ -24,8 +27,8 @@ void difference(long double right_sum, long double x){
         a0 = a0 * x*tmp;
         sum += a0;
 
-       //if(i % 100000 == 0)
-           cout<<"rigth_sum = "<<right_sum<<", sum = "<<sum<<", a"<<i<<" = "<<a0<<endl;
+       //вывод одной итерации
+        cout<<"rigth_sum = "<<right_sum<<", sum = "<<sum<<", a"<<i<<" = "<<a0<<endl;
         i++;
 
     }
@@ -46,7 +49,6 @@ int main()
     long double rightRes = pow(a,b);
     cout<<"pow = "<<rightRes;
     rightRes *=6;
-    rightRes -= 60*pow(x,-1.3);
 
     cout << "right_sum = " << rightRes <<", x="<<x<< endl;
 
@@ -54,7 +56,7 @@ int main()
     return 0;
 }
 
-
+//ниже неиспользуемые функции
 
 long double getRes(){
     long double res = rand()%25*0.001;
